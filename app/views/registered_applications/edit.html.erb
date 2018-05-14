@@ -1,2 +1,10 @@
-<h1>RegisteredApplications#edit</h1>
-<p>Find me in app/views/registered_applications/edit.html.erb</p>
+<h1>Edit Registered Applications</h1>
+
+<div class='row'>
+  <div class='col-md-4'>
+    <p>Guidelines for registered applications</p>
+    <ul>
+      <li>Whatever, man.</li>
+    </ul>
+      <%= render partial: 'form', locals: { registered_application: @registered_application} %>
+  </div>
