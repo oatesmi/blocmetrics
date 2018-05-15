@@ -2,15 +2,21 @@
   <div class="row">
     <div class="col-md-8">
       <div>
-        <%= @registered_application.name %> <br>
+        <h4><%= @registered_application.name %></h4>
+        <h5><%= @registered_application.url %></h5> <br>
         <small>
           submitted <%= time_ago_in_words(@registered_application.created_at) %> ago
         </small>
+
       </div>
       <hr>
       <div class="row">
-        <p><%= @registered_application.url %></p>
-        <p><%= @events %></p>
+        <h4>Events</h4>
+
+        <% @events.each do |event, count| %>
+          <h5><%= "#{event}: #{count.length}" %></h5>
+        <% end %>
+
       </div>
     </div>
     <div class="col-md-4">
