@@ -17,6 +17,9 @@
           <h5><%= "#{event}: #{count.length}" %></h5>
         <% end %>
 
+        <div><%= pie_chart @registered_application.events.group(:name).count %></div>
+        <div><%= line_chart @registered_application.events.group_by_day(:created_at).count %></div>
+
       </div>
     </div>
     <div class="col-md-4">

@@ -32,10 +32,11 @@ end
 applications = RegisteredApplication.all
 
 1000.times do
-  Event.create!(
+  event = Event.create!(
     registered_application: applications.sample,
     name: Faker::Lovecraft.word
   )
+  event.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
 end
 
 events = Event.all
