@@ -11,3 +11,36 @@ admin_user = User.create!(
   email: 'oatesmi.74@gmail.com',
   password: 'password'
 )
+
+10.times do
+  User.create!(
+    email: Faker::Internet.safe_email,
+    password: Faker::Internet.password(6)
+  )
+end
+
+users = User.all
+
+20.times do
+  RegisteredApplication.create!(
+    user: users.sample,
+    name: Faker::Lovecraft.deity,
+    url: Faker::Internet.url
+  )
+end
+
+applications = RegisteredApplication.all
+
+1000.times do
+  Event.create!(
+    registered_application: applications.sample,
+    name: Faker::Lovecraft.word
+  )
+end
+
+events = Event.all
+
+puts "Seeds finished"
+puts "#{User.count} users created"
+puts "#{RegisteredApplication.count} registered applications created"
+puts "#{Event.count} events created"
