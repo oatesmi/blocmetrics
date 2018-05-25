@@ -1,11 +1,16 @@
 # README
-This is the JS snippet you can put in your app to track events.  In Rails, put th snippet in app/assets/javascripts/application.js:
+<b>User Story</b>
+* As a user, I want to sign up for a free account by providing a name, password, and email
 
-'''var blocmetrics = {};
-  blocmetrics.report = function(eventName){
-    var event = {event: {name: eventName }};
-    var request = new XMLHttpRequest();
-    request.open("POST", "http://localhost:3000/api/events", true);
-    request.setRequestHeader('Content-Type', 'application/json');
-    request.sent(JSON.stringify(event));
-  }
+* As a user, I want to sign in and out of Blocmetrics
+
+* As a user, I want to register an application with Blocmetrics for tracking
+
+* As a user, I want events associated with registered applications
+
+* As a developer, I want to receive incoming events in an API controller
+
+* As a user, I want to use JavaScript to capture client-side events in my application
+
+* As a user, I want to see a graph of events for each registered application
+
