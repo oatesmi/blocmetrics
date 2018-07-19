@@ -4,4 +4,6 @@ class RegisteredApplication < ApplicationRecord
 
   validates :name, length: { minimum: 1, maximum: 100 }, presence: true
   validates :url, length: { minimum: 1, maximum: 100 }, presence: true
+
+  default_scope { order('created_at DESC') }
 end

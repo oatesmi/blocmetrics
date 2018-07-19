@@ -13,4 +13,3 @@
 * As a user, I want to use JavaScript to capture client-side events in my application
 
 * As a user, I want to see a graph of events for each registered application
-
