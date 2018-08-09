@@ -7,7 +7,8 @@ class RegisteredApplicationsController < ApplicationController
 
   def show
     @registered_application = RegisteredApplication.find(params[:id])
-    @events = @registered_application.events.group_by(&:name)
+    @registered_application.user = current_user
+
   end
 
   def new
@@ -16,6 +17,7 @@ class RegisteredApplicationsController < ApplicationController
 
   def create
     @registered_application = RegisteredApplication.new(registered_application_params)
+    @registered_application.user = current_user
 
     if @registered_application.save
       redirect_to @registered_application, notice: "Application was registered successfully."
