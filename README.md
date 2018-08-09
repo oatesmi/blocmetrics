@@ -1,24 +1,15 @@
 # README
+<b>User Story</b>
+* As a user, I want to sign up for a free account by providing a name, password, and email
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* As a user, I want to sign in and out of Blocmetrics
 
-Things you may want to cover:
+* As a user, I want to register an application with Blocmetrics for tracking
 
-* Ruby version
+* As a user, I want events associated with registered applications
 
-* System dependencies
+* As a developer, I want to receive incoming events in an API controller
 
-* Configuration
+* As a user, I want to use JavaScript to capture client-side events in my application
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* As a user, I want to see a graph of events for each registered application

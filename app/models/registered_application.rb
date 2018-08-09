@@ -8,4 +8,5 @@ class RegisteredApplication < ApplicationRecord
             length: { minimum: 1, maximum: 100 },
             presence: true,
             uniqueness: true 
+
 end
